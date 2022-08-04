@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <p style="position: absolute; width: 100vw; z-index: 99; top: 0px; margin: 0; padding: 10px; border-bottom: 2px solid black; background-color: #fff; text-align: center; font-family: Helvetica Neue, sans-serif; font-weight: 400; font-size: inherit;">As with any AC, you can’t make cold, only<b> remove heat</b>.<br><i>Tap on different components to see how it works!</i></p>
+    <!-- <model-viewer> HTML element -->
+      <model-viewer bounds="tight" enable-pan src="untitled.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+        <button class="Hotspot" slot="hotspot-1" data-position="11.991479364910237m 9.909031579197197m -17.891988594208268m" data-normal="0.9968828346400531m -0.000006518147353633995m 0.07889622270759408m" data-orbit="-50.94862deg 84.56856deg 0.06545582m" data-target="-0.04384604m 0.07348397m -0.1213202m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Compressor<div class="HotspotAnnotationDescription">Uses electricity to increase the pressure of the refrigeration gas running through the pipes. Gas enters the compressor with a low-pressure and low-temperature, but leaves with a high-pressure and high-temperature.</div></div>
+        </button><button class="Hotspot" slot="hotspot-2" data-position="5.91216181975594m 31.11116374890905m 8.609033865103783m" data-normal="0.900970417885256m 0.43388052053030995m -1.2105333880933302e-7m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Filter/Drier<div class="HotspotAnnotationDescription">Combination of a filter and drier. Removes any particles like dirt, metal, and copper chippings while also removing any moisture from the liquid refrigerant.</div></div>
+        </button><button class="Hotspot HotspotBig" slot="hotspot-4" data-position="6.240573612891954m 15.94031670297914m 12.01177641987692m" data-normal="0.9716029358257069m -0.23661727556298703m -1.3054344187539242e-7m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Condenser<div class="HotspotAnnotationDescription">Exchanges heat and condenses the refrigerant from a gas to a liquid. With the help of the fan blowing in fresh air behind the system, heat flows away from the pipes and is absorbed into the flowing air, cooling the refrigeration gas to the point it turns into a liquid (condensation).</div></div>
+        </button><button class="Hotspot" slot="hotspot-5" data-position="5.494715235209923m 30.209870172783663m -15.81016697829452m" data-normal="0.9914450645751943m -0.13052464874295228m -1.3320940724620665e-7m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Three Way Valve<div class="HotspotAnnotationDescription">Combination of a filter and drier. Removes any particles like dirt, metal, and copper chippings while also removing any moisture from the liquid refrigerant.</div></div>
+        </button><button class="Hotspot HotspotBig" slot="hotspot-6" data-position="6.247970912672204m 55.998029225984155m -10.750018696984284m" data-normal="0.9997371370462526m 0.022927206775889126m -1.3432352047161824e-7m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Evaporator<div class="HotspotAnnotationDescription">Does the job we think AC’s as a whole do: absorb heat. The refrigerant enters the evaporator as a low-temperature low-pressure liquid, and the fan located behind it pushes air into the evaporator system. This cools the air as heat is transferred from the environment to the refrigerant in the pipes, leaving your air with less heat (cooler) than before.</div></div>
+        </button><button class="Hotspot" slot="hotspot-7" data-position="4.490021234462792m 49.57581468883739m 11.126306278944075m" data-normal="0.9914445666483473m 0.1305284308626028m -1.3320934034533385e-7m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Heat Exchanger Pipe<div class="HotspotAnnotationDescription">Carries the refrigerant from the thermal expansion valve (TEV) into the evaporator, letting the refrigerant expand to regulate how much of it enters the evaporator.</div></div>
+        </button><button class="Hotspot" slot="hotspot-8" data-position="8.240542174398037m 10.890116374880668m -1.7318463510979845m" data-normal="0.9974902653742511m -0.0004399368625781291m 0.07080237947387802m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Liquid Receiver<div class="HotspotAnnotationDescription">Exchanges heat and condenses the refrigerant from a gas to a liquid. With the help of the fan blowing in fresh air behind the system, heat flows away from the pipes and is absorbed into the flowing air, cooling the refrigeration gas to the point it turns into a liquid (condensation).</div></div>
+        </button><button class="Hotspot" slot="hotspot-9" data-position="7.793308841873102m 13.545449068532271m -6.576194782821539m" data-normal="0.996167716139884m 0.000004159537827659049m -0.08746359987644146m" data-visibility-attribute="visible">
+            <div class="HotspotAnnotation">Suction Accumulator<div class="HotspotAnnotationDescription">Protects the compressor by making sure that the refrigerant flows in one direction. In a truck, it’s likely that the refrigerant may flow back into the compressor (since the truck is moving), which is why the suction accumulator is there to prevent that from happening.</div></div>
+        </button>
+        <button class="Hotspot" slot="hotspot-10" data-position="-7.250002452146832m 54.568745232143975m -11.000727880574678m" data-normal="-0.9999999999999911m 0m 1.3435883843274954e-7m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Evaporator Vent<div class="HotspotAnnotationDescription">Allows the fan to pull in air into the evaporator system, which absorbs any heat from the air (AKA cooling the air).</div></div>
+      </button><button class="Hotspot" slot="hotspot-11" data-position="-1.4854574313695985m 15.169481812622594m 12.937629789155368m" data-normal="-0.9999999999999911m 0m 1.3435883843274954e-7m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Condenser Vent<div class="HotspotAnnotationDescription">Allows the fan to pull in air into the condenser system, which emits heat from the pipes (warming the air) while cooling down the refrigerant.</div></div>
+      </button>
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+        <!-- <button slot="ar-button" id="ar-button">
+            View in your space
+        </button>
+        <div id="ar-prompt">
+            <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        </div> -->
+    </model-viewer>      
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
