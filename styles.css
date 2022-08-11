@@ -16,32 +16,64 @@ model-viewer {
 }
 
 .Hotspot {
+  /* animation: blink-animation 1.5s steps(50, start) infinite;
+        -webkit-animation: blink-animation 1.5s steps(50, start) infinite; */
   background: transparent;
-  border-radius: 32px;
+  border-radius: 12px;
   border: 0;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); */
   box-sizing: border-box;
+  /* opacity: .9; */
   cursor: pointer;
-  height: 64px;
-  padding: 8px;
+  height: 50px;
+  padding: 2px;
   position: relative;
   transition: opacity 0.3s;
-  width: 64px;
+  width: 50px;
 }
 
 .HotspotBig {
-  width: 150px;
-  height: 150px;
-  /* background: #fff; */
+    width: 115px;
+    height: 115px;
 }
 
-/* .Hotspot:not([data-visible]) {
-  background: transparent; 
-  border: 4px solid #fff;
+.VisibleHotspot {
+  animation: blink-animation 1.5s steps(50, start) infinite;
+  -webkit-animation: blink-animation 1.5s steps(50, start) infinite;
+background: rgb(0, 255, 238);
+border-radius: 20px;
+border: 0;
+/* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25); */
+box-sizing: border-box;
+opacity: .9;
+cursor: pointer;
+height: 20px;
+/* position: relative; */
+transition: opacity 0.2s;
+margin: auto;
+margin-top: 25px;
+width: 20px;
+}
+
+@keyframes blink-animation {
+  to {
+    opacity: .85;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    opacity: .85;
+  }
+}
+
+/* .VisibleHotspot:not([data-visible]) {
+  background: transparent;
+  border: .5px solid rgb(0, 255, 238);
   box-shadow: none;
-  height: 32px;
+  height: 16px;
   pointer-events: none;
-  width: 32px;
+  width: 16px;
+  border-radius: 16px;
 } */
 
 /* .Hotspot:focus {
@@ -53,8 +85,9 @@ model-viewer {
 
 .Hotspot:focus .HotspotAnnotation {
   display: block;
-  transform: translateX(-48px);
+  transform: translateX(-140px);
 }
+
 
 .Hotspot > * {
   opacity: 1;
@@ -65,6 +98,7 @@ model-viewer {
   display: none;
   background: #fff;
   border-radius: 4px;
+  opacity: 1;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   color: rgba(0, 0, 0, 0.8);
   /* display: block; */
@@ -73,7 +107,7 @@ model-viewer {
   font-size: 18px;
   font-weight: 800;
   left: calc(100% + 1em);
-  max-width: 256px;
+  max-width: 200px;
   overflow-wrap: break-word;
   padding: 0.5em 1em;
   position: absolute;
@@ -83,17 +117,23 @@ model-viewer {
 
 .HotspotAnnotationDescription {
   padding-top: .25em;
-  font-size: 12px;
+  font-size: 16px;
   text-align: left;
   font-weight: 400;
 }
 
-.Hotspot:not([data-visible]) > * {
-  opacity: 0;
+/* .Hotspot:not([data-visible]) > * {
+  background: transparent;
+  border: .5px solid rgb(0, 255, 238);
+  box-shadow: none;
+  height: 20px;
+  pointer-events: none;
+  width: 20x;
+  border-radius: 20px;
   pointer-events: none;
   transform: translateY(calc(-50% + 4px));
   transition: transform 0.3s, opacity 0.3s;
-}
+} */
 
 
 .progress-bar {
@@ -125,39 +165,6 @@ model-viewer {
   transition: width 0.3s;
 }
 
-#ar-button {
-  background-image: url(ar_icon.png);
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-  background-position: 12px 50%;
-  background-color: #fff;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  bottom: 16px;
-  padding: 0px 16px 0px 40px;
-  font-family: Roboto Regular, Helvetica Neue, sans-serif;
-  font-size: 14px;
-  color:#4285f4;
-  height: 36px;
-  line-height: 36px;
-  border-radius: 18px;
-  border: 1px solid #DADCE0;
-}
-
-#ar-button:active {
-  background-color: #E8EAED;
-}
-
-#ar-button:focus {
-  outline: none;
-}
-
-#ar-button:focus-visible {
-  outline: 1px solid #4285f4;
-}
-
 @keyframes circle {
   from { transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg); }
   to   { transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg); }
@@ -166,20 +173,4 @@ model-viewer {
 @keyframes elongate {
   from { transform: translateX(100px); }
   to   { transform: translateX(-100px); }
-}
-
-model-viewer > #ar-prompt {
-  position: absolute;
-  left: 50%;
-  bottom: 60px;
-  animation: elongate 2s infinite ease-in-out alternate;
-  display: none;
-}
-
-model-viewer[ar-status="session-started"] > #ar-prompt {
-  display: block;
-}
-
-model-viewer > #ar-prompt > img {
-  animation: circle 4s linear infinite;
 }

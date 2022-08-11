@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SAMSAT Tank Engine Model</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <p style="position: absolute; width: 100vw; z-index: 99; top: 0px; margin: 0; padding: 10px; border-bottom: 2px solid black; background-color: #fff; text-align: center; font-family: Helvetica Neue, sans-serif; font-weight: 400; font-size: inherit;">Tap on different components to understand how<br>the <a href="https://www.dieselhub.com/specs/detroit-53-series-two-stroke-diesel.html">Detroit Diesel V-53</a> tank engine works!</p>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer id="engine" bounds="tight" enable-pan src="Marine Tank Engine Model.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" environment-image="neutral" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 95deg auto">
+      <button class="Hotspot" slot="hotspot-2" data-position="0.6150150322898082m 0.9637556479214143m -0.34640240300656977m" data-normal="0.2130211413161112m 0.011971469367604374m -0.9769742459622781m" data-orbit="-218.1deg 90.15deg auto" data-target=".64m 1m -.29m" data-visibility-attribute="visible">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Oil Filter<div class="HotspotAnnotationDescription">Helps keep the oil running through the system clear of debris.</div></div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="0.4834714317799834m 0.9547634222478049m -0.3291382395926741m" data-normal="-0.01613672205287582m 0.2599376182763953m -0.9654905700244737m" data-orbit="-153.4deg 83.28deg auto" data-target=".57m 1m -.36m" data-visibility-attribute="visible">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Fuel Filter<div class="HotspotAnnotationDescription">Optimizes fuel efficiency and tank performance by filtering the fuel.</div></div>
+      </button><button class="Hotspot" slot="hotspot-4" data-position="-0.17592613567400575m 1.2065957869081552m -0.4090041968269391m" data-normal="-0.0011760958990259104m -0.053809714668429355m -0.9985505151997762m" data-visibility-attribute="visible" data-orbit="-153.4deg 83.28deg auto" data-target=".57m 1m -.36m">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Hydraulic Radiator<div class="HotspotAnnotationDescription">The hydraulic fluid absorbs and transports excessive heat through tubes inside the hydraulic cooler, where a fan pushes air through flat channels to externally cool the tubes.</div></div>
+      </button><button class="Hotspot" slot="hotspot-6" data-position="-1.0306356481538903m 0.4241168081594401m 0.057722484192432144m" data-normal="-0.6349343151398229m -0.7121466721813213m 0.2995088191673057m" data-visibility-attribute="visible" data-orbit="-88.35deg 95.72deg auto" data-target="-.87m .57m -.06m">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Universal Joint<div class="HotspotAnnotationDescription">The driveshaft extends from the crankshaft of the cylinders, bisecting the vehicle through the center and draws directly from their newly-generated horsepower. As the wheels draw power from the driveshaft, they must be able to rotate laterally (making steering possible). This capability is enabled by the universal joint, a cross-shaped joint which allows the transmission of rotational power between two systems which meet at an angle.</div></div>
+      </button><button class="Hotspot" slot="hotspot-7" data-position="-0.5775345720149568m 0.7379322525765644m 0.3447243547683865m" data-normal="-0.03565680995804304m -0.03932844124341413m 0.9985899386700127m" data-visibility-attribute="visible" data-orbit="-3.25deg 83.63deg auto" data-target="-.58m .73m .34m">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Hydraulic Fluid Tank<div class="HotspotAnnotationDescription">A hydraulic reservoir is constructed with two lines entering either side of the tank, separated by a low wall known as a Baffle Plate—a design which allows fluid to be added to the reservoir without causing any to be simultaneously sucked out. The tank walls cool the fluid by absorbing heat, while any contaminating air in the tank is allowed to escape through a breather.</div></div>
+      </button><button class="Hotspot" slot="hotspot-8" data-position="-0.22488458590576998m 1.0628896993716839m 0.26003860495259357m" data-normal="0.21223294196075992m -0.7922598739159411m 0.5720851951670991m" data-visibility-attribute="visible" data-orbit="50.74deg 90.16deg auto" data-target="-.22m 1.07m .27m">
+         <div class="VisibleHotspot"></div> <div class="HotspotAnnotation">Air Intake<div class="HotspotAnnotationDescription">Air inputs the system here, helping keep things cool as it circulates around. See the refrigeration exhibit to learn more about dissipating heat!</div></div>
+      </button><button class="Hotspot" slot="hotspot-9" data-position="0.3476947804367181m 0.8074990348519919m 0.25612682970956646m" data-normal="-0.14651288725798584m 0.7481740141745629m 0.6471241135835148m" data-visibility-attribute="visible" data-orbit="-22.38deg 82.75deg auto" data-target=".34m .81m .26m">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Turbocharging Turbines<div class="HotspotAnnotationDescription">Located between the air intake and the cylinder box, the turbocharger uses high-speed turbines to force air into the cylinder, compressing it. The abundance of oxygen available from this compressed air maximizes the power generated from the combustion reaction inside the cylinders.</div></div>
+      </button><button class="Hotspot" slot="hotspot-11" data-position="-0.6434193976650341m 1.558301913409423m -0.047744503183957857m" data-normal="-0.013580319203708113m 0.999761876414141m -0.01708114162464258m" data-target="-.7m 1.55m -.05m" data-orbit="-76.94deg 52.03deg auto" data-visibility-attribute="visible">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Exhaust Output<div class="HotspotAnnotationDescription">When new air is pushed into the cylinders through the turbocharger, burned gasses are expelled from the chamber as exhaust.</div></div>
+      </button><button class="Hotspot" slot="hotspot-12" data-position="0.5336785275261577m 0.7150264336713842m 0.23161053168419432m" data-normal="0.3033876248031417m -0.820706617157732m 0.4841452237395511m" data-visibility-attribute="visible" data-orbit="4.503deg 83.33deg auto" data-target=".54m .72m .23m">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Cylinder Box<div class="HotspotAnnotationDescription">The Cylinder Box is a box-like housing for the six cylindrical combustion chambers that generate all the power. Try seeing if you can trace all the cylinders!</div></div>
+      </button><button class="Hotspot" slot="hotspot-14" data-position="1.0356787375573533m 0.5677113228025852m -0.028973155331211697m" data-normal="0.9773098126943155m 0.17464842025596586m 0.11984765042960782m" data-visibility-attribute="visible" data-orbit="89.48deg 71.67deg auto" data-target="1.03m .57m -.02m">
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Engine Belt<div class="HotspotAnnotationDescription">Helps the 6-cylinder engine run more effectively by taking advantage of the converted mechanical energy.</div></div>
+    </button><button class="Hotspot" slot="hotspot-15" data-position="0.4226944891701738m 1.3352206477811586m -0.03882852437362794m" data-normal="0.1834366417778863m 0.9821370960412015m 0.04192520760839886m" data-visibility-attribute="visible" data-orbit="90.57deg 23.34deg auto" data-target=".42m 1.34m -.04m">
+      <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Air Filter<div class="HotspotAnnotationDescription">The first stage of air intake consists of cleaning, in which the air is filtered of dust and debris.</div></div>
+    </button><button class="Hotspot" slot="hotspot-16" data-position="0.6641035152309511m 0.5928687955169084m 0.11902416398129079m" data-normal="-0.42957638443707097m 0.06055520027074134m 0.9009978899276869m" data-visibility-attribute="visible" data-orbit="-1.041deg 82.87deg auto" data-target=".66m .6m .12m">
+      <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Engine Starter<div class="HotspotAnnotationDescription">Tries to prevent the engine from failing/stuttering when starting from ignition.</div></div>
+    </button> 
+        <div class="progress-bar hide" slot="progress-bar">
+            <div class="update-bar"></div>
+        </div>
+    </model-viewer>
+    <script type="module">
+        const modelViewer1 = document.querySelector("#engine");
+        const annotationClicked = (annotation) => {
+          let dataset = annotation.dataset;
+          modelViewer1.cameraTarget = dataset.target;
+          modelViewer1.cameraOrbit = dataset.orbit;
+          modelViewer1.fieldOfView = '45deg';
+        }
+      
+        modelViewer1.querySelectorAll('button').forEach((hotspot) => {
+          console.log("hello hotspot", hotspot);
+          hotspot.addEventListener('click', () => annotationClicked(hotspot));
+        });
+      </script>
+      
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
