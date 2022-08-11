@@ -2,6 +2,11 @@
   display: none;
 }
 
+a {color:#0000FF;}         /* Unvisited link  */
+a:visited {color:#0000FF;} /* Visited link    */
+a:hover {color:#0000FF;}   /* Mouse over link */
+a:active {color:#0000FF;}  /* Selected link   */
+
 body {
   margin: 0;
   padding: 0;
@@ -85,7 +90,7 @@ width: 20px;
 
 .Hotspot:focus .HotspotAnnotation {
   display: block;
-  transform: translateX(-140px);
+  transform: translateX(-180px);
 }
 
 
@@ -107,7 +112,7 @@ width: 20px;
   font-size: 18px;
   font-weight: 800;
   left: calc(100% + 1em);
-  max-width: 200px;
+  max-width: 256px;
   overflow-wrap: break-word;
   padding: 0.5em 1em;
   position: absolute;

@@ -4,17 +4,17 @@
     <title>SAMSAT Tank Engine Model</title>
     <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link type="text/css" href="./styles.css" rel="stylesheet"/>
     <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
     <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
   </head>
   <body>
-    <p style="position: absolute; width: 100vw; z-index: 99; top: 0px; margin: 0; padding: 10px; border-bottom: 2px solid black; background-color: #fff; text-align: center; font-family: Helvetica Neue, sans-serif; font-weight: 400; font-size: inherit;">Tap on different components to understand how<br>the <a href="https://www.dieselhub.com/specs/detroit-53-series-two-stroke-diesel.html">Detroit Diesel V-53</a> tank engine works!</p>
+    <p style="position: absolute; width: 100vw; z-index: 99; top: 0px; margin: 0; padding: 10px; border-bottom: 2px solid black; background-color: #fff; text-align: center; font-family: Helvetica Neue, sans-serif; font-weight: 400; font-size: inherit;">Pan/zoom with two fingers or tap on different components to<br>understand how the <a href="https://www.dieselhub.com/specs/detroit-53-series-two-stroke-diesel.html">Detroit Diesel V-53</a> tank engine works!</p>
     <!-- <model-viewer> HTML element -->
     <model-viewer id="engine" bounds="tight" enable-pan src="Marine Tank Engine Model.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="Marine Tank Engine Poster.webp" shadow-intensity="1" environment-image="neutral" min-camera-orbit="auto 0deg auto" max-camera-orbit="auto 95deg auto">
       <button class="Hotspot" slot="hotspot-2" data-position="0.6150150322898082m 0.9637556479214143m -0.34640240300656977m" data-normal="0.2130211413161112m 0.011971469367604374m -0.9769742459622781m" data-orbit="-218.1deg 90.15deg auto" data-target=".64m 1m -.29m" data-visibility-attribute="visible">
-        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Oil Filter<div class="HotspotAnnotationDescription">Helps keep the oil running through the system clear of debris.</div></div>
+        <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Oil Filter<div class="HotspotAnnotationDescription">Found between the oil pump and oil cooler, the oil filter is a part of the engine lubrication system, which is responsible for delivering oil to the cylinders to lubricate the camshaft bearings, which is necessary for smooth horsepower generation.</div></div>
       </button><button class="Hotspot" slot="hotspot-3" data-position="0.4834714317799834m 0.9547634222478049m -0.3291382395926741m" data-normal="-0.01613672205287582m 0.2599376182763953m -0.9654905700244737m" data-orbit="-153.4deg 83.28deg auto" data-target=".57m 1m -.36m" data-visibility-attribute="visible">
         <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Fuel Filter<div class="HotspotAnnotationDescription">Optimizes fuel efficiency and tank performance by filtering the fuel.</div></div>
       </button><button class="Hotspot" slot="hotspot-4" data-position="-0.17592613567400575m 1.2065957869081552m -0.4090041968269391m" data-normal="-0.0011760958990259104m -0.053809714668429355m -0.9985505151997762m" data-visibility-attribute="visible" data-orbit="-153.4deg 83.28deg auto" data-target=".57m 1m -.36m">
@@ -34,10 +34,12 @@
       </button><button class="Hotspot" slot="hotspot-14" data-position="1.0356787375573533m 0.5677113228025852m -0.028973155331211697m" data-normal="0.9773098126943155m 0.17464842025596586m 0.11984765042960782m" data-visibility-attribute="visible" data-orbit="89.48deg 71.67deg auto" data-target="1.03m .57m -.02m">
         <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Engine Belt<div class="HotspotAnnotationDescription">Helps the 6-cylinder engine run more effectively by taking advantage of the converted mechanical energy.</div></div>
     </button><button class="Hotspot" slot="hotspot-15" data-position="0.4226944891701738m 1.3352206477811586m -0.03882852437362794m" data-normal="0.1834366417778863m 0.9821370960412015m 0.04192520760839886m" data-visibility-attribute="visible" data-orbit="90.57deg 23.34deg auto" data-target=".42m 1.34m -.04m">
-      <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Air Filter<div class="HotspotAnnotationDescription">The first stage of air intake consists of cleaning, in which the air is filtered of dust and debris.</div></div>
+      <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Air Filter<div class="HotspotAnnotationDescription">During air intake, a cleaning process takes place in which the air is filtered of dust and debris. It then must pass through a silencer to reach the compressor. This part operates as a felt-lined channel through which air enters from either side and is expelled through the middle. Another component of the air intake system is the shutdown housing, which contains a valve to halt air flow during emergency shutdown.</div></div>
     </button><button class="Hotspot" slot="hotspot-16" data-position="0.6641035152309511m 0.5928687955169084m 0.11902416398129079m" data-normal="-0.42957638443707097m 0.06055520027074134m 0.9009978899276869m" data-visibility-attribute="visible" data-orbit="-1.041deg 82.87deg auto" data-target=".66m .6m .12m">
       <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Engine Starter<div class="HotspotAnnotationDescription">Tries to prevent the engine from failing/stuttering when starting from ignition.</div></div>
-    </button> 
+    </button> <button class="Hotspot" slot="hotspot-17" data-position="0.28356162742088675m 0.3829121803553446m 0.16330154377132633m" data-normal="0.007661751308877106m -0.7494437935045717m 0.6620236385087452m" data-visibility-attribute="visible" data-orbit="64.85deg 90.81deg auto" data-target=".28m .38m .16m">
+      <div class="VisibleHotspot"></div><div class="HotspotAnnotation">Two-Stroke Diesel Cylinders<div class="HotspotAnnotationDescription">This is where all the mechanical force is generated! From the top of the cylinder, diesel fuel is injected into compressed air, which causes the mixture to ignite and forcefully expand, sending the piston (which forms the floor of the chamber) into a downward motion—creating the power stroke. Following this action, valves at the top of the chamber open and allow exhaust gasses to escape.</div></div>
+    </button>
         <div class="progress-bar hide" slot="progress-bar">
             <div class="update-bar"></div>
         </div>
